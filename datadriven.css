@@ -1,0 +1,490 @@
+You sent
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Body */
+body {
+  background: linear-gradient(135deg, #5685c7, #512432); /* Soft blue gradient */
+  color: #333;
+  font-size: 16px;
+  min-height: 100vh;
+  border: 10px solid #ffffff; /* Modern border around the webpage */
+  border-radius: 20px;
+  padding: 40px; /* Increased padding for more space around the content */
+  margin: 20px; /* Margin for additional space around the webpage */
+}
+
+/* Container */
+.container {
+  max-width: 1600px; /* Increased max-width for larger content area */
+  margin: 0 auto;
+  padding: 40px; /* Added padding for better spacing */
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between; /* Adjust alignment to fit logo and button */
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(145deg, #5971a2, #e0e0e0); /* Purple to pink gradient */
+  border: 2px solid #61949d;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper 3D shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 40px; /* Space below header */
+}
+
+header:hover {
+  transform: scale(1.05); /* Slight 3D hover zoom effect */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+header .logo-box {
+  display: flex;
+  align-items: center;
+  padding: 15px; /* Increased padding for better spacing */
+  background: #ffffff; /* White background for logo box */
+  border: 3px solid #4857a1; /* Border color matching the theme */
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .logo-box:hover {
+  transform: scale(1.05); /* Slight hover zoom effect */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+header .logo-box img {
+  width: 150px; /* Larger logo size */
+  height: auto;
+}
+
+header .tagline-box {
+  background: #694990; /* Deep purple for tagline box */
+  color: #ffffff;
+  padding: 15px 25px; /* Increased padding for tagline box */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* 3D shadow */
+  font-size: 1.2rem; /* Increased font size for better readability */
+  margin-left: 20px; /* Space between logo and tagline box */
+  font-family: 'Arial', sans-serif; /* Modern font for tagline */
+}
+
+header .login-button {
+  padding: 12px 25px; /* Increased padding for login button */
+  background-color: #d3c8c1; /* Deep purple */
+  color: #ffffff;
+  font-size: 1rem; /* Slightly larger font size */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Smaller 3D shadow */
+  margin-left: 20px; /* Space between logo and button */
+}
+
+
+
+/* Main Section */
+section {
+  text-align: center;
+  padding: 100px 40px; /* Increased padding */
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Enhanced 3D shadow for section */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 60px; /* Space below section */
+}
+
+section:hover {
+  transform: translateY(-10px); /* Slight hover lift for 3D effect */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+section h2 {
+  font-size: 2.6rem; /* Increased font size */
+  font-weight: 500;
+  color: #5079a9;
+  margin-bottom: 20px;
+}
+
+section p {
+  max-width: 1000px; /* Increased max-width for more text space */
+  margin: 0 auto 40px;
+  font-size: 1.3rem; /* Increased font size */
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Button Styles */
+button, .cta-button {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: #a769ae; /* Bright pink for buttons */
+  color: #ffffff;
+  font-size: 1.1rem; /* Increased font size */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger button shadow */
+}
+
+button:hover, .cta-button:hover {
+  background-color: #67b5c0; /* Lighter pink on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Form Section */
+.form-section {
+  background-color: #f1f1f1;
+  padding: 80px 40px; /* Increased padding */
+  margin: 80px 0; /* Increased margin for spacing above and below */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Deeper 3D shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section:hover {
+  transform: translateY(-10px); /* Subtle lift on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.form-section h2 {
+  font-size: 2.2rem; /* Increased font size */
+  margin-bottom: 30px;
+  color: #5389a2;
+}
+
+form {
+  max-width: 800px; /* Increased max-width */
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 25px; /* Increased margin-bottom for spacing */
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #555;
+  display: block;
+  margin-bottom: 10px; /* Increased margin-bottom for better spacing */
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 3D shadow for inputs */
+}
+
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Purple glow on focus */
+}
+
+/* Customer Reviews */
+.customer-reviews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Increased gap between reviews */
+  justify-content: center;
+  margin-bottom: 10px; /* Space below customer reviews */
+}
+
+.review-box {
+  background: #251f1f;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger 3D shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 320px; /* Increased width for review boxes */
+}
+
+.review-box:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.review-box:before {
+  content: '';
+  display: block;
+  width: 60px; /* Larger photo size */
+  height: 60px;
+  background: url('path/to/customer-photo.png') no-repeat center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 3px solid #53858a;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px; /* Increased space below the photo */
+}
+
+.review-box h3 {
+  font-size: 1.9rem; /* Increased font size */
+  color: #38657b;
+  margin-bottom: 10px;
+}
+
+.review-box p {
+  font-size: 1.2rem; /* Increased font size */
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Product Photos */
+.product-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* Increased gap between product photos */
+  justify-content: center;
+  margin-bottom: 80px; /* Space below product photos */
+}
+
+.product-photos img {
+  width: 100%;
+  max-width: 500px; /* Larger product images */
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* 3D shadow for product photos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-photos img:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  font-size: 1rem; /* Slightly larger font size */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for footer */
+}
+/* Product Image Box */
+.product-image-box {
+  background-color: #ffffff; /* White background for the box */
+  border: 2px solid #435879; /* Border color matching the theme */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Padding inside the box */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* 3D shadow for the box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for effects */
+  max-width: 500px; /* Maximum width of the box */
+  margin: 20px auto; /* Center the box with spacing around it */
+  overflow: hidden; /* Ensure contents don't overflow */
+}
+
+/* Product Image */
+.product-image-box img {
+  width: 100%; /* Make the image fill the box */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for the image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for effects */
+}
+
+/* Hover Effects */
+.product-image-box:hover {
+  
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+}
+
+.product-image-box:hover img {
+  transform: scale(1.1); /* Zoom effect on image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for image */
+}
+/* Customer Review Box */
+.review-box-extended {
+  background: #ffffff;
+  padding: 30px; /* Increased padding */
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Stronger 3D shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Full width for better alignment */
+  max-width: 800px; /* Max width */
+  margin: 0 auto; /* Center the box */
+  margin-bottom: 60px; /* Space below review box */
+  text-align: center;
+  position: relative; /* Positioning for photo upload section */
+}
+
+.review-box-extended:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.review-box-extended .review-photo {
+  position: absolute; /* Absolute positioning for the photo upload section */
+  top: 15px; /* Adjust as needed */
+  right: 15px; /* Adjust as needed */
+  width: 80px; /* Fixed size for the photo */
+  height: 80px;
+  border-radius: 50%; /* Circular photo */
+  border: 4px solid #4b8d96; /* Border color */
+  background: #f0f0f0; /* Background for empty state */
+  background-size: cover; /* Cover background for photo */
+  background-position: center; /* Center the photo */
+  overflow: hidden; /* Hide overflow */
+}
+
+.review-box-extended .review-photo input[type="file"] {
+  display: none; /* Hide the file input */
+}
+
+.review-box-extended .review-photo::before {
+  content: '+';
+  font-size: 2rem; /* Icon size */
+  color:(#397770,#5c768e); /* Icon color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.review-box-extended .review-photo:hover {
+  background-color: #e0eaff; /* Light blue background on hover */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.review-box-extended .review-photo:hover::before {
+  content: 'Change'; /* Change text on hover */
+  font-size: 1rem; /* Smaller font size */
+  color: #417788; /* Darker text color */
+}
+
+/* Customer Review */
+.review-box-extended h3 {
+  font-size: 2.5rem; /* Larger font size */
+  color: #477a92;
+  margin-bottom: 15px;
+}
+
+.review-box-extended p {
+  font-size: 1.4rem; /* Larger font size */
+  line-height: 1.6;
+  color: #666;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #72a3a1; /* Light gray background */
+}
+
+header {
+  background-color: #549a90; /* Green background */
+  color: rgb(0, 0, ); /* White text color */
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Center text */
+}
+
+.container {
+  max-width: 1100px; /* Maximum width of the content */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Horizontal padding */
+}
+
+.container img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+  margin-bottom: 15px; /* Space below the image */
+}
+
+h1 {
+  font-size: 2.5em; /* Size of the heading */
+  margin: 10px 0; /* Margin for top and bottom */
+}
+p {
+  font-size: 1.2em; /* Size of the paragraph text */
+  margin: 0; /* Remove default margin */
+}
+.product-photos a img {
+  width: 100%; /* Make the image responsive */
+  max-width: 300px; /* Maximum width for the images */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.product-photos a:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+
+
+/* Instagram icon container */
+.instagram-container {
+  position: relative;
+  display: inline-block;
+}
+
+.instagram-icon {
+  font-size: 40px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.instagram-icon:hover {
+  color: #e4405f; /* Instagram brand color */
+}
+
+/* Instagram preview box */
+.instagram-preview {
+  position: absolute;
+  bottom: 60px;
+  left: -20px;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.instagram-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.instagram-preview p {
+  font-size: 14px;
+  margin: 10px 0 0;
+  color: #333;
+}
+
+/* Show preview when hovering on Instagram icon */
+.instagram-container:hover .instagram-preview {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+

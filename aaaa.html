@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script> window.chtlConfig = { chatbotId: "3411751621" } </script>
+<script async data-id="3411751621" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data driven nutrition</title>
+    <link href="datadriven.css" rel="stylesheet" type="text/css">
+
+    <a href="https://www.yourwebsite.com/product1"> <!-- Replace with product link -->
+
+      
+    
+  </a>
+</body>
+</html>
+<style>
+
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #2f3c88;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #recommendations {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="file:///Users/akshatsrivastava/Desktop/LOGO.png" alt="Logo">
+
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <h2>Personalized Supplements for Your Body</h2>
+            <p>Let us create a custom supplement plan based on your unique body metrics and goals.</p>
+            <p>Use our new ai model "data-driven ai"</p>
+            <button onclick="document.getElementById('goal-form').scrollIntoView()">Get Started</button>
+        </div>
+    </section>
+
+    <section id="goal-form" class="form-section">
+        <div class="container">
+            <h2>Tell Us About You</h2>
+            <form id="nutritionForm">
+                <div class="form-group">
+                    <label for="goal">What's your goal?</label>
+                    <select id="goal" name="goal" required>
+                        <option value="">Select your goal</option>
+                        <option value="muscle_gain">Gain more muscles</option>
+                        <option value="fat_loss">Lose fat</option>
+                        <option value="testosterone_support">Testosterone support</option>
+                        <option value="performance">Better performance in sport</option>
+                        <option value="longevity">Better longevity</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="16" max="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="weight">Weight (kg/lbs):</label>
+                    <input type="number" id="weight" name="weight" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="workout_split">What's your current workout split?</label>
+                    <input type="text" id="workout_split" name="workout_split" placeholder="e.g., Push-Pull-Legs" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="workout_frequency">How many times do you workout per week?</label>
+                    <input type="number" id="workout_frequency" name="workout_frequency" min="1" max="7" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="allergies">Do you have any dietary allergies?</label>
+                    <input type="text" id="allergies" name="allergies" placeholder="e.g., dairy, gluten, nuts">
+                </div>
+
+                <div class="form-group">
+                    <label for="current_supplements">Are you currently taking any supplements?</label>
+                    <input type="text" id="current_supplements" name="current_supplements" placeholder="e.g., Creatine, Protein Powder">
+                </div>
+
+                <button type="button" onclick="generateRecommendations()">Get Recommendations</button>
+            </form>
+
+            <div id="recommendations"></div>
+        </div>
+    </section>
+
+    <script>
+        function generateRecommendations() {
+            // Get the form values
+            const goal = document.getElementById('goal').value;
+            const gender = document.getElementById('gender').value;
+            const age = parseInt(document.getElementById('age').value);
+            const weight = parseFloat(document.getElementById('weight').value);
+            const workoutSplit = document.getElementById('workout_split').value;
+            const workoutFrequency = parseInt(document.getElementById('workout_frequency').value);
+            const allergies = document.getElementById('allergies').value;
+            const currentSupplements = document.getElementById('current_supplements').value;
+
+            // Placeholder recommendations
+            let supplements = [];
+
+            // Recommendations based on goal
+            if (goal === 'muscle_gain') 
+                supplements.push('Creatine', 'Protein Powder', 'Glutamine', 'BCAAs','Whey Protien',' Fish Oil');
+            } if (goal === 'fat_loss') {
+                supplements.push('Green Tea Extract', 'L-Carnitine', 'CLA', 'Omega-3','Caffeine','Thermogenic Fat Burners');
+            } else if (goal === 'testosterone_support') {
+                supplements.push('Zinc', 'Vitamin D', 'Magnesium', 'Tribulus','D-Aspartic Acid ','Ashwagandha');
+            } else if (goal === 'performance') {
+                supplements.push('Beta-Alanine', 'Caffeine', 'Electrolytes', 'Citrulline Malate','Nitric Oxide Boosters','Beetroot Juice (Nitrate)');
+            } else if (goal === 'longevity') {
+                supplements.push('Collagen', 'Omega-3', 'Curcumin', 'Resveratrol','Curcumin (Turmeric Extract)','Probiotics');
+            }
+
+      // Workout frequency or weight could impact dosage but we'll keep it simple for now
+
+            // If the user has allergies, recommend allergy-free supplements
+            if (allergies.toLowerCase().includes('dairy')) {
+                supplements = supplements.filter(sup => sup !== 'Whey Protein');
+                supplements.push('Vegan Protein');
+            }
+
+            // Display the recommendations
+            const recommendationsDiv = document.getElementById('recommendations');
+            recommendationsDiv.innerHTML = '<h3>Recommended Supplements:</h3>';
+            recommendationsDiv.innerHTML += '<ul>' + supplements.map(sup => `<li>${sup}</li>`).join('') + '</ul>';
+        
+    </script>
+
+           
+   
+
+</body>
+</html>
+
+  <!-- Logo Section -->
+  <section class="logo-section">
+    <img src="file:///Users/akshatsrivastava/Downloads/ddn.jpg" alt="Company Logo">
+    <div class="description">
+        <h2>Our Brand</h2>
+        <p>We provide the best products with a commitment to quality and innovation. Trusted by customers worldwide, our brand stands for 
+          RELIABILITY , EXCELLENCE and TRANSPARENCY. </p>
+    </div>
+</section>
+<div class="product-image-box">
+    <img src="file:///Users/akshatsrivastava/Downloads/ddn3.png" alt="Product Image">
+    <head>
+    <tittle> 
+    </tittle>
+    </head>
+    <img src=""
+    width = "10px" hight="10px">
+
+
+    
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Review Box</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="review-box">
+        <div class="photo">
+            
+        </div>
+        <div class="review-content">
+            <h3>Jay Gupta</h3>
+            <div class="rating">★★★★☆</div>
+            <p>"I love the transparency of the products !! worth every single penny"</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+</section>
+<div class="product-image-box">
+    <img src="file:///Users/akshatsrivastava/Downloads/DATADRIVEN.png" alt="Product Image">
+    
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Review Box</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="review-box">
+        <div class="photo">
+            
+        </div>
+        <div class="review-content">
+            <h3>Yash Goel</h3>
+            <div class="rating">★★★★☆</div>
+            <p>"TOP G supplement"</p>
+        </div>
+    </div>
+</body>
+</html>
+
+    </section>
+    <div class="product-image-box">
+        <img src="file:///Users/akshatsrivastava/Downloads/GGDATA.jpeg" alt="Product Image">
+        
+    </div>
+    <h2>28,000,000 POSSIBLE FORMULATIONS.</h2>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Review Box</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="review-box">
+        <div class="photo">
+           
+        </div>
+        <div class="review-content">
+            <h3>Tejas Khatri</h3>
+            <div class="rating">★★★★☆</div>
+            <p>"The product tastes great and mixes well! No chalky aftertaste. Just wish the container was bigger."</p>
+         
+
+        
+        </div>
+    </div>
+</body>
+</html>
+</section>
+<div class="product-image-box">
+    <img src="file:///Users/akshatsrivastava/Downloads/DATADATA.png" alt="Product Image">
+    
+</div>
+     
+         
+
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Customer Support</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Customer Support</h1>
+        </header>
+        <section class="support-section">
+            <h2>How can we help you?</h2>
+            <p>If you have any questions or recommendations, please fill out the form below:</p>
+            <form id="support-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+    </footer>
+    
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Link</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="instagram-container">
+      <!-- Instagram Icon -->
+      <a
+        href="https://www.instagram.com/data_driven_nutrition/"
+        target="_blank"
+        class="instagram-icon"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <!-- Instagram preview box -->
+      <div class="instagram-preview">
+        <img
+          src="file:///Users/akshatsrivastava/Downloads/ggwp.png" 
+      
+         
+          alt=""
+        />
+        <p>!</p>
+      </div>
+    </div>
+  </body>
+</html>   
