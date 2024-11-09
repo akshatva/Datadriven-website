@@ -298,6 +298,7 @@ Picked Just for you.
     
 </div>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -305,55 +306,77 @@ Picked Just for you.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQs - Nutrition Supplements</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add any relevant styles here or in your CSS file */
+        .faq-answer {
+            display: none; /* Hide answers by default */
+            padding: 10px;
+            border-top: 1px solid #32aeb9;
+            margin-top: 5px;
+        }
+        .faq-item.active .faq-answer {
+            display: block; /* Show the answer when active */
+        }
+        .faq-question {
+            cursor: pointer;
+            background-color: #104586;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            text-align: left;
+            outline: none;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="faq-section">
-        <h2>FAQ's</h2>
-        <div class="faq-container">
-            
-            <!-- FAQ 1 -->
-            <div class="faq-item">
-                <button class="faq-question">What are nutrition supplements?</button>
-                <div class="faq-answer">
-                    <p>Nutrition supplements are products designed to provide essential nutrients such as vitamins, minerals, amino acids, and proteins that may be lacking in your diet.</p>
-                </div>
+<div class="faq-section">
+    <h2>FAQ's</h2>
+    <div class="faq-container">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+            <button class="faq-question">What are nutrition supplements?</button>
+            <div class="faq-answer">
+                <p>Nutrition supplements are products designed to provide essential nutrients such as vitamins, minerals, amino acids, and proteins that may be lacking in your diet.</p>
             </div>
-            
-            <!-- FAQ 2 -->
-            <div class="faq-item">
-                <button class="faq-question">Do I need supplements if I eat a balanced diet?</button>
-                <div class="faq-answer">
-                    <p>If you maintain a well-balanced diet, you may not need supplements. However, certain conditions, dietary restrictions, or fitness goals may benefit from supplementation.</p>
-                </div>
-            </div>
-
-            <!-- FAQ 3 -->
-            <div class="faq-item">
-                <button class="faq-question">Are supplements safe to use?</button>
-                <div class="faq-answer">
-                    <p>Most supplements are safe if used correctly and bought from reputable brands. It's important to follow recommended dosages and consult with a healthcare provider before starting any supplement.</p>
-                </div>
-            </div>
-
-            <!-- FAQ 4 -->
-            <div class="faq-item">
-                <button class="faq-question">What is the best time to take protein supplements?</button>
-                <div class="faq-answer">
-                    <p>Protein supplements can be taken after a workout for muscle recovery, or throughout the day to meet your daily protein needs. Timing depends on your fitness goals.</p>
-                </div>
-            </div>
-
-            <!-- FAQ 5 -->
-            <div class="faq-item">
-                <button class="faq-question">Can I take multiple supplements together?</button>
-                <div class="faq-answer">
-                    <p>Yes, but be cautious about the dosages to avoid overdosing on certain nutrients. It's best to consult with a healthcare provider or nutritionist before combining supplements.</p>
-                </div>
-            </div>
-
         </div>
+        
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+            <button class="faq-question">Do I need supplements if I eat a balanced diet?</button>
+            <div class="faq-answer">
+                <p>If you maintain a well-balanced diet, you may not need supplements. However, certain conditions, dietary restrictions, or fitness goals may benefit from supplementation.</p>
+            </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+            <button class="faq-question">Are supplements safe to use?</button>
+            <div class="faq-answer">
+                <p>Most supplements are safe if used correctly and bought from reputable brands. It's important to follow recommended dosages and consult with a healthcare provider before starting any supplement.</p>
+            </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+            <button class="faq-question">What is the best time to take protein supplements?</button>
+            <div class="faq-answer">
+                <p>Protein supplements can be taken after a workout for muscle recovery, or throughout the day to meet your daily protein needs. Timing depends on your fitness goals.</p>
+            </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+            <button class="faq-question">Can I take multiple supplements together?</button>
+            <div class="faq-answer">
+                <p>Yes, but be cautious about the dosages to avoid overdosing on certain nutrients. It's best to consult with a healthcare provider or nutritionist before combining supplements.</p>
+            </div>
+        </div>
+
     </div>
+</div>
+
 
 </body>
 </html>
